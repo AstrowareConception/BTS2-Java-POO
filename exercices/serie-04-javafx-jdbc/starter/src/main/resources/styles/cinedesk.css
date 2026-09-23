@@ -1,0 +1,18 @@
+.root {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+}
+
+.toolbar {
+    -fx-padding: 12px;
+    -fx-background-color: #f3f5f7;
+}
+
+.button.primary {
+    -fx-background-color: #e66b2e;
+    -fx-text-fill: white;
+}
+
+.status {
+    -fx-padding: 8px 12px;
+}

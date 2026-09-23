@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fr.bts.sio.desktop.ui.CatalogController">
+    <top>
+        <HBox spacing="8" styleClass="toolbar">
+            <TextField fx:id="searchField" promptText="Rechercher un film" HBox.hgrow="ALWAYS" />
+            <Button text="Rechercher" onAction="#onSearch" />
+            <Button text="Ajouter" onAction="#onAddMovie" styleClass="primary" />
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="movieTable" placeholder="Aucun film à afficher">
+            <columns>
+                <TableColumn text="Titre" prefWidth="360" />
+                <TableColumn text="Année" prefWidth="100" />
+                <TableColumn text="Durée" prefWidth="100" />
+                <TableColumn text="Genre" prefWidth="180" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <Label fx:id="statusLabel" styleClass="status" />
+    </bottom>
+</BorderPane>

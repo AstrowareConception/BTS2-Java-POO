@@ -1,0 +1,26 @@
+### Lister les films
+GET http://localhost:8080/api/movies?page=0&size=20
+Accept: application/json
+
+### Créer un film
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Alien",
+  "releaseYear": 1979,
+  "duration": 117,
+  "genreId": 1
+}
+
+### Requête invalide à transformer en Problem Details
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": " ",
+  "releaseYear": 1800,
+  "duration": 0,
+  "genreId": -1
+}
